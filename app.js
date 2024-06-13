@@ -11,14 +11,28 @@ app.set("views", "./views");
 
 // Servir archivos estáticos
 app.use(express.static('public'));
+// Servir Bootstrap CSS y JS
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+
+// Servir jQuery
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 // Ruta raíz
 app.get("/", (req, res) => {
+    const productos = [
+        { nombre: "banana" },
+        { nombre: "cebollas" },
+        { nombre: "pimenton" },
+        { nombre: "papas" },
+        { nombre: "lechuga" },
+        { nombre: "tomate" }
+    ];
     res.render("dashboard", {
-        layout: "main",
-        productos: ["banana", "cebollas", "pimiento", "papas", "lechuga", "tomate"] // Ejemplo de arreglo de productos
+        productos: productos
     });
 });
+
+
 
 // Iniciar servidor
 app.listen(port, () => {

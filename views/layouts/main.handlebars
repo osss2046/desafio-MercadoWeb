@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Web</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<!-- jQuery -->
+<script src="/jquery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Aquí podrías incluir el partial del menú -->
+        {{> menu }}
+    </header>
+
+    <main>
+        {{{ body }}}  <!-- Contenido principal renderizado aquí -->
+    </main>
+
+    <footer>
+        <p>© 2023 Mercado Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/jquery/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/bootstrap/bootstrap.js"></script>
+    <!-- Custom JS -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
